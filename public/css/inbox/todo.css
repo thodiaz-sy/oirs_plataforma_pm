@@ -1,0 +1,106 @@
+.todo-nav {
+    margin-top: 10px
+}
+
+.todo-list {
+    margin: 10px 0
+}
+
+.todo-list .todo-item {
+    padding: 15px;
+    margin: 5px 0;
+    border-radius: 0;
+    background: #f7f7f7
+}
+
+.todo-list.only-active .todo-item.complete {
+    display: none
+}
+
+.todo-list.only-active .todo-item:not(.complete) {
+    display: block
+}
+
+.todo-list.only-complete .todo-item:not(.complete) {
+    display: none
+}
+
+.todo-list.only-complete .todo-item.complete {
+    display: block
+}
+
+.todo-list .todo-item.complete span {
+    text-decoration: line-through
+}
+
+.btn-todo-item {
+    color: #ccc;
+    visibility: hidden;
+    padding-right: 0.5em;
+}
+
+.btn-todo-item:hover {
+    color: #5f5f5f
+}
+
+.todo-item:hover .btn-todo-item {
+    visibility: visible
+}
+
+div.checker {
+    width: 18px;
+    height: 18px
+}
+
+div.checker input,
+div.checker span {
+    width: 18px;
+    height: 18px
+}
+
+div.checker span {
+    display: -moz-inline-box;
+    display: inline-block;
+    zoom: 1;
+    text-align: center;
+    background-position: 0 -260px;
+}
+
+div.checker, div.checker input, div.checker span {
+    width: 19px;
+    height: 19px;
+}
+
+div.checker, div.radio, div.uploader {
+    position: relative;
+}
+
+div.button, div.button *, div.checker, div.checker *, div.radio, div.radio *, div.selector, div.selector *, div.uploader, div.uploader * {
+    margin: 0;
+    padding: 0;
+}
+
+div.button, div.checker, div.radio, div.selector, div.uploader {
+    display: -moz-inline-box;
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+}
+
+.todo-list .todo-item > span {
+    margin-left: 0.5em;
+}
+
+.edit-task{
+    width: 80%;
+    margin-left: 1em;
+    display: inline;
+}
+
+.todo-list .todo-item-no-data {
+    padding: 15px;
+    margin: 5px 0;
+    border-radius: 0;
+    background: #f7f7f7;
+    text-align: center;
+}

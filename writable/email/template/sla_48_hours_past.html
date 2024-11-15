@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700,800" rel="stylesheet">
+
+    <!-- CSS Reset : BEGIN -->
+    <style>
+
+        /* What it does: Remove spaces around the email design added by some email clients. */
+        /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+        html,
+body {
+    margin: 0 auto !important;
+    padding: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+    background: #f1f1f1;
+	font-family: 'Raleway',sans-serif;
+}
+
+/* What it does: Stops email clients resizing small text. */
+* {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* What it does: Centers email on Android 4.4 */
+div[style*="margin: 16px 0"] {
+    margin: 0 !important;
+}
+
+/* What it does: Stops Outlook from adding extra spacing to tables. */
+table,
+td {
+    mso-table-lspace: 0pt !important;
+    mso-table-rspace: 0pt !important;
+}
+
+/* What it does: Fixes webkit padding issue. */
+table {
+    border-spacing: 0 !important;
+    border-collapse: collapse !important;
+    table-layout: fixed !important;
+    margin: 0 auto !important;
+}
+
+/* What it does: Uses a better rendering method when resizing images in IE. */
+img {
+    -ms-interpolation-mode:bicubic;
+}
+
+/* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+a {
+    text-decoration: none;
+}
+
+/* What it does: A work-around for email clients meddling in triggered links. */
+*[x-apple-data-detectors],  /* iOS */
+.unstyle-auto-detected-links *,
+.aBn {
+    border-bottom: 0 !important;
+    cursor: default !important;
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+}
+
+/* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+.a6S {
+    display: none !important;
+    opacity: 0.01 !important;
+}
+
+/* What it does: Prevents Gmail from changing the text color in conversation threads. */
+.im {
+    color: inherit !important;
+}
+
+/* If the above doesn't work, add a .g-img class to any image in question. */
+img.g-img + div {
+    display: none !important;
+}
+
+/* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+/* Create one of these media queries for each additional viewport size you'd like to fix */
+
+/* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+@media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+    u ~ div .email-container {
+        min-width: 320px !important;
+    }
+}
+/* iPhone 6, 6S, 7, 8, and X */
+@media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+    u ~ div .email-container {
+        min-width: 375px !important;
+    }
+}
+/* iPhone 6+, 7+, and 8+ */
+@media only screen and (min-device-width: 414px) {
+    u ~ div .email-container {
+        min-width: 414px !important;
+    }
+}
+
+
+    </style>
+
+    <!-- CSS Reset : END -->
+
+    <!-- Progressive Enhancements : BEGIN -->
+    <style>
+
+	    .primary{
+	background: #0e4194;
+}
+.bg_white{
+	background: #ffffff;
+}
+.bg_light{
+	background: #f7fafa;
+}
+.bg_black{
+	background: #000000;
+}
+.bg_dark{
+	background: rgba(0,0,0,.8);
+}
+.email-section{
+	padding:2.5em;
+}
+
+/*BUTTON*/
+.btn{
+	padding: 10px 15px;
+	display: inline-block;
+}
+.btn.btn-primary{
+	border-radius: 5px;
+	background: #0e4194;
+	color: #ffffff;
+}
+.btn.btn-white{
+	border-radius: 5px;
+	background: #ffffff;
+	color: #000000;
+}
+.btn.btn-white-outline{
+	border-radius: 5px;
+	background: transparent;
+	border: 1px solid #fff;
+	color: #fff;
+}
+.btn.btn-black-outline{
+	border-radius: 0px;
+	background: transparent;
+	border: 2px solid #000;
+	color: #000;
+	font-weight: 700;
+}
+.btn-custom{
+	color: rgba(0,0,0,.3);
+	text-decoration: underline;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Raleway', sans-serif;
+	color: #000000;
+	margin-top: 0;
+	font-weight: 400;
+}
+
+body{
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 1.8;
+	color: rgba(0,0,0,.4);
+}
+
+a{
+	color: #0e4194;
+}
+
+.table-content{
+	margin-top: 1em!important;
+	width: 100%;
+}
+/*LOGO*/
+
+.logo h1{
+	margin: 0;
+}
+.logo h1 a{
+	color: #0e4194;
+	font-size: 24px;
+	font-weight: 700;
+	font-family: 'Raleway', sans-serif;
+}
+
+/*HERO*/
+.hero{
+	position: relative;
+	z-index: 0;
+}
+
+.hero .text{
+	color: rgba(0,0,0,.3);
+}
+.hero .text h2{
+	color: #000;
+	font-size: 34px;
+	margin-bottom: 0;
+	font-weight: 200;
+	line-height: 1.4;
+}
+.hero .text h3{
+	font-size: 24px;
+	font-weight: 300;
+}
+.hero .text h2 span{
+	font-weight: 600;
+	color: #000;
+}
+
+.text-author{
+	bordeR: 1px solid rgba(0,0,0,.05);
+	max-width: 80%;
+	margin: 0 auto;
+	padding: 2em;
+}
+.text-author img{
+	border-radius: 50%;
+	padding-bottom: 20px;
+}
+.text-author h3{
+	margin-bottom: 0;
+}
+ul.social{
+	padding: 0;
+}
+ul.social li{
+	display: inline-block;
+	margin-right: 10px;
+}
+
+/*FOOTER*/
+
+.footer{
+	border-top: 1px solid rgba(0,0,0,.05);
+	color: rgba(0,0,0,.5);
+}
+.footer .heading{
+	color: #000;
+	font-size: 20px;
+}
+.footer ul{
+	margin: 0;
+	padding: 0;
+}
+.footer ul li{
+	list-style: none;
+	margin-bottom: 10px;
+}
+.footer ul li a{
+	color: rgba(0,0,0,1);
+}
+
+.table-bordered {
+    border: 1px solid #dee2e6;
+}
+.table.table-bordered td, .table.table-bordered th {
+    border-color: #f6f6f6;
+	padding: 0.5em;
+	text-align: left;
+}
+
+.table-bordered td, .table-bordered th {
+    border: 1px solid #dee2e6;
+}
+th {
+    background-color: #f8f8f8!important;
+    width: 40%;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.text-left{
+	text-align: left;
+}
+.alert.alert-secondary {
+    background-color: #f8f8f8;
+}
+.alert {
+    color: #515151;
+    border: none;
+    padding: 15px 20px;
+	/* margin-left: 1.5em;
+    margin-right: 1.5em; */
+}
+.alert-secondary {
+    color: #868585;
+    background-color: #e2e3e5;
+    border-color: #d6d8db;
+}
+.alert {
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+.text-center{
+	text-align: center!important;
+}
+@media screen and (max-width: 500px) {
+
+
+}
+
+
+    </style>
+
+
+</head>
+
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #f1f1f1;">
+	<center style="width: 100%; background-color: #f1f1f1;">
+    <div style="display: none; font-size: 1px;max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+    </div>
+    <div style="max-width: 800px; margin: 0 auto;" class="email-container">
+    	<!-- BEGIN BODY -->
+      <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+      	<tr>
+          <td valign="top" class="bg_white" style="padding: 1em 2.5em 0 2.5em;">
+          	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+          		<tr>
+          			<td class="logo" style="text-align: center;">
+			            <h1>
+							<!-- <img src="cid:{cid1}" alt="logo" style="width: 100px;"/>
+							 -->
+
+							 <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVsAAADWCAYAAAB/liFfAAAbV0lEQVR42u2dv2/cVrbHv1r4DxgL6jOBBdiudlxETezVqLJSeWZLbcEREO9rtDCFNNE+wJJSbNIYorFuNg6gYRGVT+MqSmUacRql2NnKDqBg6fr5aZm/IK8gKc6Q95KXv2ZIzvcDDAyPhrz3nnPvueeee3gJEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCFlolhrVGtMAgJcAulQtIbVjA5puNbVxv6N+CSGExrY8NH1J4NlbOD1bArAR+v5Q8v2Gd49Dyb2tqXunLVN0b+AQmr4U+UTvW0SdqySnw5Ry2kjVniJkWEyZGxHdiutQLTmNvk8jJxpbQgghNLaEEEJjSwghhMaWEEJobAkhhMaWEEJIbhb5oQbL+3fytw6AMYAWgM7E97b3CX8/9q5pe5/wvTveNZP3Tlum6N6vJG3aL7jOVZKT7N4yOfllpmmPapmy9hRR5hDAO4FuPwAwyFHnKslJRqMfaqinsb27Bjzc6gA4Evw13GkIIfXAN87T32n6bhMad62WtV5ZhmdQu+yfhDSGTpMbV09j+/7SX9JY7J+ENN7bJYQQQtSo9wZZELttUZWENNCr1XSnKY25VuvaP9wC3E2yLvslIY1jAw0KFdbb2L69AG6tmnBTodZTGN26KjBN+xx6/LXA9vTaVvz9odfXm9g2v+++mrieYYRK4ebXHmA6zzSpw+7XrJWHKduXZvIh89VrGl0tAfitoW1zr9H0gyYq+loD27QL+Q6mhunE8LourWQcoeHpMwuwbG6qbocATMnfOhDnzNPYVpyx8CkU1/utv6cne8LGbZ9De0XdVpR3wvb1PwF69xdCvdfYw2M7f7lhFncQzXJJWO7jkOnbU+6SMf076Sxo+kbJ9TlA+SGsctvhGsiuJ1uiCA+iIYQQGltCCGEYoap0vOWaiA9q3zrTiFsSt9ilqduK8kFM+zo0tvXkqKSBAMTFIzV9SSFGWESM8mWB7Ymv6+nZAfqb3Zgyi4sNJscz3bJU9FAEvU0ktF1V52ni5MXHQNO1Iy7enjfeP0D9M4FobEMw9YtQt9VjCKZ+NQ6mfhHqtnosfOoXN8gIIYTGlhBCaGwJIYQowtSvusHUr+bC1C8a25rR9F1NPiJJ3daRAZj61TiY+kWo2+oxBFO/GgdTvwh1Wz2Y+sUeTgghNLaEEEJjSwghRA2mftUNpn41F6Z+0djWDKZ+Eeq2egzA1K/GwdQvQt1WjyGY+tU4mPpFqNvqwdQv9nBCCKFnS8peBcix8f7S96isDNen480FcHvVVizLKl0yyW1XlQNXG4TGdsGXrIAb347n9fkY8bHEYvjqGeDG9YYK9S6/Pq/P1dquKkdCY9vANjH1i1C31YOpXw1sE1O/4mRjGlVa1mowjfXSJ990E3XZ6VftknRbdQZg6lfjYOpXMYZnFrQTjM+saWG+GStM/aKxrRVlpn4dxv7V3eQxAbyS/MLK7wsy9auxlKHbtxcAYCf23eT+beds3cKnfnGDTH0gAMBB7G+CTR5CqsHbC0DT7cS+q9K/SS6YZ0sIIfRsScEMIY+bFbYGgHpcfIzy06bSxunLTivrYAHik2QxjK0Wk2KyXvvWmUbcUq+dcPU7aVywmLoB6eLiTsXqg1Lr09sE+ptl6bbqrMe0r/4pmQtqbAclDpRu7vvkH8z7hbTn1iqwt9MuYBDbXkwwHyvLwJPHLeTfcXeg6eMK6TxNffYL77fVkWsXTTibhMZ2inJSv1yPpIg8yKWc1xeTHrS3409MeQf4IYrYWLm75i+x88rYKiwUUIzO09Sn+NSv6sh1CKZ+NQ6e+kWo2+rBU7/YwwkhhMaWEEJobAkhhKjB1K+60ez0oMWGqV80tjVj0HCd7YNQt/WjC6Z+NY6NmGyEg9p3aE1fknhFgJves9AdmrqtLIfQ9Khn62YjdLEAb43m47ppO0xTOD0D+ptWAXeyCqlPutOp4hhXTOf2XPVcnFxtDn8a21l5Hb5n3AxGZ8DozMIs3uelahRUTqeizusv1wWF2QiEEEJjSwghzYCpX3WDqV/NhalfNLY1Y9BwnTH1i7qtI10w9atxlJP69fkOcHt1APfkMKFfgucnQzzc6iDuBCNNz3ciVZHpQcE18rq6v4k7ccqEpg8L8uySytrFm4txoh5mVx8VnY+h6bsz123advz8yxA3b8TJVb0dYpj6RWdCkdur/lJO1uFfYWUZmP8bWrN4HEl0YttdLHFltZT0MLv61Enn8e24eSNJriQn3CAjhBAaW0IIobElhBCiCFO/6gZTv5oLU79obGvGoOE6Y+oXdVtHumDqV+PgqV+Euq0eC5/6xZgtIYTQ2BJCCI0tIYQQGltCCKkOTP2qG0z9ai5M/aKxrRmDhuuMqV/UbR3pgqlfjYOpX4S6rR5M/WIPJ4QQGltCCKGxJYQQQmNLCCGVgalfdYOpX82FqV80tjVj0HCdMfWLuq0jXTD1q3Ew9YtQt9WDqV/s4YQQQs+2OpyeAf1NK+YXFt5eAIAN4LBWHkccby6A26sm5G+ttQqrSXJZtpIeZlcfFZ3bc9ewSjtG3wO9+3Gys2kEaGxnw+gMGJ1ZiYNZ020vXFGHZSsS6/rVMwAYzqQ+qmWp6GGW9am6zlXbcfrdbOS6oDCMQAgh9GwzcQTTcCR/a9e+daYRt5HQYZembqu6joJpyFIvWzS2dSE5jufjx6yqtFRSje+mbZ+NaIzOqogefOyK1adcxPFdma7EunVDP0vzHW/f+SGH+Hr89S/AzRsDhbYBwIsKjk1CCCGEEEIIIYSQebBUy1r3NoH+ZhcL8NQJIQuO+InQGsLUL0IImQH1zEao55NahJD02BQBIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEJIDpYoAkJqzK1VYG+njemD8cfQdIfCqRZ8BxkhdWVlGdjbaQH4J4K3HYwBbFA41YMH0RBSV548BoCjiKGlV0tjSwgpiN4mAHQBDLxvbBraasMwAiF1pH9lbC3vm10aWhrbcllZBp48bgHoIbpJMBJ6BO7B48n4hxaLNyH8Mhzh3zXdmqhbR7k96tfFb4KklYsKQTt7mH4j6giaPs4ga0d4XXKZjlemrVhmUM7dNeDhVmfiXjY03RZ8n4QdKf/TLeDeWi+ktzEAK6KrPBtbt1bhXecgeJliD6aBWHmm7RP31oBPQzIRHeSdVkd5r6sp9c5G2NsBbq0OMB23Qqijb091QNMAgN8UDd/SxDUHAPZDv9iGpg+Ff9f0pUxvlEh33VDo0QSD/lgiFxtAP9HQTeK28QiALvnFyJOHk1LWtteGUYYyDWj6ruCa3wTG9vrE3196XiEAHELTDwTfJ+FeN23ATwUTsm9A+lOGStynkt9KIO+LPpZX1nSf+HwHuJ1prEzLxB8T0785nghnJOtITbfDpnnr9Y3Z9jaBW6vdGIMCz8M4LrEW63OWwiBikO+uAffW/IEvk0sbwEuYRrsgQwvPOznN0IY2gFOYRi9DmTpM40ihjBZMo1OKBm6tAg+32p4e2tLyXXnnq4O7IabHGFo/tBDtE7dXOwpj5RSm0VKuT6CjQYKODjLo1p8YGkN9ja0bs9pX+GUHpjEoqRbdCkiiM2WoHm6pyqUF4FGKJauuJI/sBuUoY5m64qRRjq72dnx5qxipR7nKWlnO1ufV+0Q7wXBm7Rf7V0Y83XUDZYeAxrZ0wgNoA28vlgBsh75/kHCfDcknuXPGGZfX5/7ybPKew9CvdhXLHHp/73v3jPOwe5H2vRHKpae0gojKeQzguvcZpbyn385tb3kdlaVrHHoxZVqp25HUB56fJOkiTo+9SHjph/MlT1dp65mkh1YoBPMh3HDgsKA+8UCpPn/8JG2/cHX7X38S1cXKqdtaUM8NMrEBsK7iXaYxxHRsKt7ryPf2zq7A+Lm8v4QXc7Imlk/RDqpW/jtouuXFYxFasneulovRTbWwXPYnlrvJXsPtVdHvnkLTHS+2/DQ0IH6vJGtXFr8PeTitCQ8urLNDaLrjtf9pSI4tRT0hdmJ8fT4OLXUncWL01Arp0zV899ZGXt/opKhnkic5tSCHptveRtNhyCttx8gy3CceIc0mLgDcvCHvF/1PgN79cL/oArCwfF1UH/e6P/8J+PijLLqlZztnxjMqZ7Zx2/eXCHmE4WVmUue0C6iFnRCeUOXXFL91EtufRDguXA5Owv+zIZ70XIIXoEYRT8AopY7Z+5Zb/v9eFlkXGtsG0qMIasM6RUAYRijXsx2XcO+O8hKVVAXqaRZj5f3/+R6qVfCKisa2cmg64G52lLlUnDS48x7EDoiM0cTqo4MGxQArO1Z+OAd+OB+DB+IsjGerjmm8jMz0okTsaV5MGNsH3v/L5dYq0N9sI5p/+IJKlPIvTO/i9ygSxD0V6aR62IXQ2M5geWkhyF3sIJqyUjT72NvZF9bD3/0mcbryjSzjtoCfHzxANP/WokdaDtwgyzeAnZwGOy82NJ0DI5kXc9YTITS2BRhcTHi3s6YtCIGQeD2156QrwjACiRyuocL7S2Bl+RVmFwO04J7w9HuEk8VNo5f5JK/FwPY+be//rYWXyJfPgL2dodevjjgB0dhmI3pakVX4cvv5CbC3M8LsDst4NXE61QGmY23riD4eSaYZQe15/MXg7QWg6TZMw0bR2SzuE2RdTB+IE5ySxjACSd1ZA49pdpyehZfFoFeSwA/nQHDuKyE0tjXFogiq7tOeUU+ExrZEWqWX8OaCHlMdCM5TGC9w2wmNba4l/CRtAJOHsZS/tP7mBKhSrDQ40jFOLt0CSnKP4ROfRJXGoKXJeXX1eU/pYBUZs3j4oyOUf17E4aMPALhv5pBt1Kr1iaLGitsvxIfmOIky+0Mu3Vaeem6QBcbWmfBg2zCNU7hPDD1IZQBk6VNJm2rTHtP8O0lQHxuTxygGcgkbN0tpkPc3LUxvyA28jbpfET0Q+1+KshYNcldPP5wD99bCOtufeIvAo9QGXtyOopjUf8tro585Mml07IT7HME0REZpF18+GwuuH3i//xWAFvpbeMUV7hN+HdcRPSM3mdH3QO9+WJ76xNGUA2Ff+/En4OOPRLr9QNKfbDSEumcjjEJK7UlmeDPhPnm9PatiM7IZGgRZ5eLGO10jNTlYWxDv7DsKnr5M1sOr9019c+KfBTs5mbYkhtJRSnsL2uGgyBDTmwvg9upTTL9+qStpZ5K8ZX2oNeFgWKF761J5xveJrHX0Jq/vfGNrhyYUUX3sq0eAv/4W+PgjkW6z9ieGEUrnsy/cGT/ZqzFKfdbbXd7N7mwCcQilFZKLoSCXofJjvu5bDPpIjv1lfUHfGOHDUNwMgm2Fa7dTlmUVqo+vnvmGbZzYxrypT8HbJJxEmUy+nTZdn1CXz48/AcmH2DgIv7HCvU5Nt3zhYwV4fwl89oWD4BUljmAAbyscKKPmvQRehTXVaYOd7vAnbpk/+TtH8Xd2yNiK7zEtl0OBYbbh5jyqG6nX58Dzk7F3z5FkhbEhMd5WwmfXu3ZaDt+cAM9PRgDuxJR5R+LVRuUW6PGF9O9ZcU/OupMg7zu5y3l9Di+ccCemz/cjeoj2CUdQx21JnxhL+/XX3wLfJOpoI+LsqF13hw/qEDIPbq0CptFO9fZXQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIZUm/nUwweuOBxQVIYRcYad9q/W1RGPrHjKxT9kSQsgVFqKH/eQwttPP6FeNFvg6GEKa70FW85jFcdoLlmop/t4m0N/sYvqFcoSQ5tGYF0XyHWSEEDID6nl4+OtzoL85hntkHCGkudgUASGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEkGoTfxDN3TXg4VYH7glbKoyh6U7uWsnP0bWg6VYB920rXmFD0+3M5aWXX/Yys5VVbHtlrCwDTx63IDqlTVWfweFDxfW5J4+BlWU9JDMHmm4U3s4yxo1MJnnGCAAc7QPL1/VIX8p7IEz/E6B3P1xfB5o+zjhus+s+0FXPu+/61H2BdwBGRY6HeGNrGoB7slY31YAFnmbusEG5RwB0gTH4MOd9D5DufF4b7hGTh6kFn01+2WSYvaxJyjlhKf6UtuQy4/W2kcm4BJPTPwu7Z77T6Eaezq2UOv9NYGyzn+YXGLZ/FyaXpPoCd2INrlz/6esTtG8fai9F8Me+lXcYlHHqVxvAEUzjnzCNTuqrV5bhzagD4b1No4vZ4nvY/4ZpHMM0WjMqM7sM68UjmEY7dnCUcYD9wy23bDHaHOTQA/ASpnE0V23s7SBG1o9KKvV0JuPqaB/Y29G9iWSgeFXX00vusV/mEYsdr5KtDIOgF7McfjTHrugb3VkZwGwyrBctAMcJg/+48LCGfEJ39Rw3AZSLPjeDG8ilJ50QypFLG8BpqW0zDWD5+rG3Ys469nONxd/NYCCla5zryezHegDzGwh+m17O0OC2cnSQutCFaUQH+Oc7ficvdjWzd3XfpME1L/S59PH//ovf7tYc5NKFaRyUZmjdMETeunfyTApZje0u3LNkJz8G3FfoZPcSepu+2570+6K926GgPX3I3zHUyultbUg+Mhn2SihL9BnO0cBML9NWloHbq+VMNK4Hl9SHigwljCXy3ob8lVOzX8EtX1cpt8x67RceJry35htJmQNnAehD05eg6Uv48aclb+yPip4UrmXuPOGA8d01Cw+3TLibAy1B3CN5IPc3Zcp0QvccwDQOC8l8cHknDIDfXRvh4dZTz7B2IrOcaQzSvmHTHcaSYHtv00J/8wWiGywtmEY3U5C+gMD+DD34fW8idzMFXENbbAjl06swVdKE3s6sX1H/lenBNIaet9QTeFGzo/+JqqPTKlAuIk5hGh8WNrZdfR9JncbwJvTX3wJffzvCX/8yws0bA4lT9QimYaStY3FhhNfn/gw+ksRkVMIHbUGnswT3bOX09tTb9NkXvlfiCGfiIhmd+e0dYzHRYRqdiRVO8UtW19MRTejbJXu3EtNyBgBP5y753v00cinTu22hqPht4NWKvGUjNtvnb38Hfv5lKGl/K0vfLCNm+y7TVW4cTaREU9IZZ7PMen8JvLlwrjyuqPdThgfiYHE59lY4x4XLJZjQu4IJfSiY5LoLkA2S5OiI5NIpOSuomPhtsIoJYwM4TLz+b3+H137RquTBrMIIcaSuRMzusANNH3oB7nFoadXJvLROy1fP/OXevsBL7xbmicqNQXZDYxqqOZ+7icnlxTNENPOkAzf3tS0YICNEc6/TTuj7wgn9zQVwe/WpwMg/kng3BS3fr7z4+RHn6Pz8C3DzhkguGuTx5rSMBWGTfZjGGJo+ynnvddEaUjkE4LbfFOgotc6K82zdGJsOcawpXinydK8hAODthWypNet8SFuypChgGbcJ7O10JUsoJ4ch7Cp+WnMY5u8kHkZHspz9NXNJ8rQmd0L/5gSeMQ8PwkEpqXcry/DueyCZAF7MRANJjs7X38bJpV1QLWRhuuMCyhBd/0r56v/5Ltl+lezZaoJlxLrE2tuJ3qc83cs1sM9PgCePR4humPgbZXatlm2m8VvKK56iuRjeaqib8BsrlwcYpHu1hLJ9f+mvHkYCw6N7RjHPsjiNzv16lM+f/xTv6ARyGQpWFYOccvH8zO8d9O73IdoYdp2POwUbW/VVouvoFWJfsnq2A884Tn660uVpkkcn3gUNnkueVrioLk1m7BmbZvLlM99rdWJWE4e5y5GnewV96vlJVVZQuzNzIG7eiHd0Ah2Vt29yeuU9ylY5RznHT/bVaOD5z82zVWWYGHNxY1aaUMjReGNLovCDGQ2CfLNkto6ykTMNRnUJ5GAevL0A3l/aWFk+lAyqbWi648XtsyFP93K8pWqy3stNdwq3dzgT2cfntavIpbg0ME2HtykmWiHryL4vYiMallpXXjn88SolLvd4KcvYOnAPbzAUwgdtyM5BUDudq1X6QIjvlFalB52mb1Teu/3sC8A0ROEEo5ANUHm6VytFaEJDuQ99WJ7O7ZnJXZ7XjhRyeVSYXD77AnjyuA/37IKWwMNNx+V/gOXrrxCN06vn6X/8ESDe9E/dL4tM/Rp7s8U2gA+VTqxSe2xSVeHlsLIM9DdbEq/LzrhxdTjxGYKIwgnFhA/iMzzSkCcNzA7p3JY4F7NbXcjTvdLSKSw97v2lG791n+DKzz+uNvdEk2xyjnzwoIfIRqXewMzq2W4UmHJVhKEsJw0sOPPypWRmzWYMJo8UdJdqImNwBNOwarf5lyec4B8t6Q6E7UKeIpKnNWXtq1nSwOwrnbtHO44QPdqxDTe9qj8TeVdDLlFOvwP+sGZh+fou8j6qHfSpIUSbnqbxTuoUBmfvnkr0mdpJuja3wSXfHR4rzBqiuE4xeX/TB0A/gPxgjnEhy/wvnwF7O9ve4GuFZt9juGkxi4GmA5/vHOD2ql3IxBl/upfKRLkvWH7u5poEXp8DD7fGXvnh+/dgGr0CcktVqY5cJtk99MNK67k9b3d8HUKccXEE03gA9xzh0ZXHn3ze7W6WqszP2LrLmEdCZcd1NvnhxnkUvg/TSPPorVPYTB6/QdSFaeg5D2JPk3JkzT3G+9UzFBZa+TQmf1vtwHLZZs1B7knF3Qx6IFgxHXsrmvJCCp9LHZ3RXOUyiRu/3fbk0841vn7+xcbNG7sQP5XY9caZ7+glhUSGWSfD381lQAUbTh2Bez5SXBqIPB99BrV3vDDKuNCOFeSSiiaCDkh6bkvzt83Ea99cyH5XTBqYm2Yme+7+eAZyeZRJLj//Uq5cfN5fAt+cOIWEVeLPOZhExdBmdrLmY2zl6V5qyftvL2ajcJHnl/QKjzzLHXG+afmDr4nIM0jUQhSBhx3WR1t49m6WcILrSYmW7T2Yhl6yXNI7Or7hcuViC+QyKLSuP5wDl/8ZZ122R+r9409Dz3hnWTUc5jG08zG28eleasvHL5/NTuGBkd2Gpm+UtmHlhxNkid1lHazcVORpTWmfxisvmV/T4S29x5IVTbskuWiZvNrk3xfv7Owe+qu+Ye57ff0t8NkXIwAfSiZSSGzSh0W8m+9aogG4tWoi+ixxdoMTPA22EVmep4lTPT8BHm71EY07yet2egb0Ny3FEmzvk/0Nnu7hJiL5ycMJTx4bmZ5aSVuWvM3lTCTiVC5L+R5y3dkxv38qMJbqqxJfH6r1fH0O9DfHwr4d5zjs7fSRJS7ptnEjwzWmwFiWJxef0fdA7376PQG3vN1cdZ60P5ruYGV527un7+WH3677L6Q5sIYQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQUgH+H5vJHGGl00ATAAAAAElFTkSuQmCC' alt="logo" style="width: 100px;"/>
+							
+						
+						</h1>
+			          </td>
+          		</tr>
+          	</table>
+          </td>
+	      </tr><!-- end tr -->
+				<tr>
+          <td valign="middle" class="hero bg_white" style="padding: 2em 0 1em 0;">
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+            	<tr>
+            		<td style="padding: 0 2.5em; text-align: center; padding-bottom: 1em;">
+            			<div class="text">
+            				<h3>Estimado(a) {name} </h3>
+            			</div>
+            		</td>
+            	</tr>
+            	<tr>
+			          <td style="text-align: center;font-size: 15px;">
+			          	<div class="text-author">
+				          	<span class="position">Se ha detectado que la siguiente solicitud <strong>no ha tenido gestión hace {sla_hours} horas</strong>:</span><br>							
+							<span class="position" >Le recordamos que la fecha comprometida para la resolución es <strong>{form_end_date}</strong>, se recomienda gestionar a la brevedad.</span><br><br>
+				           	<table width="100%">
+								<table class="table table-bordered table-content">
+									<tbody>
+									  <tr>
+										<th colspan="2" class="text-center">Datos de Solicitud</th>
+									  </tr>
+									  <tr>
+										<th class="text-left">Folio</th><td>{formID}</td>
+									  </tr>
+									  <tr>
+										<th class="text-left">Fecha de ingreso</th><td>{form_date_received}</td>
+									  </tr> 
+									  <tr>
+										<th class="text-left">Fecha de asignación</th><td>{form_start_date}</td>
+									  </tr> 
+									  <tr>
+										<th class="text-left">Sucursal</th><td>{branch}</td>
+									  </tr>  
+									  <tr>
+										<th class="text-left">Tipo</th><td>{type}</td>
+									  </tr> 
+									  <tr>
+										<th class="text-left">Relato del hecho</th><td>{form_description}</td>
+									  </tr>
+									  <tr>
+										<th class="text-left">Peticiones concretas</th><td>{form_solution}</td>
+									  </tr>                       
+									</tbody>
+								  </table>
+							</table><br>
+							<p style="text-align:center;margin:0px 0px 0px 0px"><a href="https://app.padremariano.com/pm_plataforma_oirs/index.php/Inbox/Read/{formID}" class="btn btn-primary">Ver detalle de formulario</a></p><br>
+				        </div>
+			          </td>
+			        </tr>
+            </table>
+          </td>
+	      </tr><!-- end tr -->
+      <!-- 1 Column Text + Button : END -->
+      </table>
+      <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+      	<tr>
+          <td class="bg_light" style="text-align: center;font-size: 15px;">
+          	<p>Atentamente <span style="color: #0e4194;">Plataforma OIRS - Centro Odontológico Padre Mariano</span></p>
+            <p></p>
+          </td>
+        </tr>
+      </table>
+
+    </div>
+  </center>
+</body>
+</html>
